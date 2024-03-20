@@ -19,6 +19,7 @@ namespace MiddlewareApp.Middleware
         public async Task Invoke(HttpContext httpContext)
         {
             _logger.LogInformation("Welcome to My Logger in custom middleware");
+            _logger.LogDebug("Debugging my Middleware application");
             await _next(httpContext);
         }
     }
